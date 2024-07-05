@@ -1,0 +1,25 @@
+{ "userData":
+  [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "admin",
+      "email": "customer@practicesoftwaretesting.com",
+      "password": "welcome01"
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "role": "user",
+      "email": "customer@practicesoftwaretesting.com",
+      "password": "welcome01"
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "role": "admin",
+      "email": "customer@practicesoftwaretesting.com",
+      "password": "welcome01"
+    }
+  ]
+}
