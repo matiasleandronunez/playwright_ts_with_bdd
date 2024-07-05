@@ -1,13 +1,12 @@
 import { defineConfig, devices } from '@playwright/test';
-import type { TestOptions } from './fixtures/fixtureBuilder';
+import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
+
+import type { TestOptions } from './steps/fixtureBuilder';
 
 require('dotenv').config();
 
 // @ts-ignore
 export default defineConfig<TestOptions>({
-    // Look for test files in the "tests" directory, relative to this configuration file.
-    testDir: 'tests',
-
     // Run all tests in parallel.
     fullyParallel: true,
 
@@ -21,10 +20,7 @@ export default defineConfig<TestOptions>({
     workers: process.env.CI ? 1 : undefined,
 
     // Reporters to use
-    reporter: [
-        ['list'],
-        ['html', {  open: 'always' }]
-    ],
+    reporter: [cucumberReporter('html', { outputFile: 'cucumber-report/report.html' })],
 
     use: {
         // Base URL to use in actions like `await page.goto('/')`.
@@ -46,25 +42,43 @@ export default defineConfig<TestOptions>({
     projects: [
         {
             name: 'authenticate',
-            testMatch: /.*\.setup\.ts/,
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/authenticate',
+                importTestFrom: './steps/fixtureBuilder.ts',
+                paths: ['./features/authenticate/*.feature'],
+                require: ['./steps/authenticate/*.ts'],
+            }),
         },
         {
             name: 'frontend-chrome',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/frontend-chrome',
+                importTestFrom: './steps/fixtureBuilder.ts',
+                paths: ['./features/frontend/*.feature'],
+                require: ['./steps/frontend/*.ts'],
+            }),
             use: { ...devices['Desktop Chrome'],
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: false,
             },
             dependencies: ['authenticate'],
-            testDir: 'tests/frontend'
         },
         {
             name: 'safari-responsive',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/safari-responsive',
+                importTestFrom: './steps/fixtureBuilder.ts',
+                paths: ['./features/frontend/*.feature'],
+                require: ['./steps/frontend/*.ts'],
+            }),
             use: { ...devices['iPhone 13'],
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: true,
             },
             dependencies: ['authenticate'],
-            testDir: 'tests/frontend'
         },
     ],
 

@@ -1,4 +1,4 @@
-import { test as base } from '@playwright/test';
+import { test as base } from 'playwright-bdd';
 import {SignInPage} from "../pages/signInPage";
 import {HomePage} from "../pages/homePage";
 import {MainMenuComponent, MainMenuComponentDesktop, MainMenuComponentResponsiveMode} from "../pages/mainMenuComponent";
