@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - never
+  pull_request:
+      types:
+        - opened
+        - edited
   workflow_dispatch:
 
 jobs:
@@ -13,6 +17,24 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: docker-compose up --exit-code-from tests tests
+        run: npx bddgen && npx playwright test --reporter=html --config=playwright.config.ts
+        env:
+          BASE_URL: ${{ vars.BASE_URL }}
+          BASE_API_URL: ${{ vars.BASE_API_URL }}
+  upload-reports:
+      name: Upload report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-artifacts
+        path: |
+          playwright-report/
+        retention-days: 14
