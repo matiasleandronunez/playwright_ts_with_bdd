@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
+import { defineBddConfig } from 'playwright-bdd';
 
 import type { TestOptions } from './steps/fixtureBuilder';
 
@@ -30,10 +30,10 @@ export default defineConfig<TestOptions>({
         baseURL: 'http://127.0.0.1:3000',
 
         // Collect trace, see with https://playwright.dev/docs/trace-viewer
-        trace: 'on',
+        trace: 'retain-on-failure',
 
         // Collect video of tests being run https://playwright.dev/docs/videos
-        video: 'on',
+        video: 'retain-on-failure',
 
         // Name of the attribute to be used by Locator method getByTestId
         testIdAttribute: 'data-test',
