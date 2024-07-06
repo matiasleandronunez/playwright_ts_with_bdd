@@ -35,7 +35,7 @@ Given('I sign into the site through the API with a valid user', async ({ request
     }
 });
 
-Then('I get a valid authorization token', async ({ request }, text: string) => {
+Then('I get a valid authorization token', async ({ request }) => {
     //test authenticated request
     expect((await request.get(CONFIG.baseApiHost + 'users/me',
         {headers:
