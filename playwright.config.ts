@@ -20,7 +20,10 @@ export default defineConfig<TestOptions>({
     workers: process.env.CI ? 1 : undefined,
 
     // Reporters to use
-    reporter: [cucumberReporter('html', { outputFile: 'cucumber-report/report.html' })],
+    reporter: [
+        ['list'],
+        ['html', {  open: 'always' }]
+    ],
 
     use: {
         // Base URL to use in actions like `await page.goto('/')`.
