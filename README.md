@@ -1,4 +1,4 @@
-# A Test Automation Framework implementing BDD with Playwright with Typescript bindings
+# A Test Automation Framework implementing BDD and Playwright with Typescript bindings
 
 ### Why BDD? Do I need it?
 BDD is in my opinion a great communication tool which can also help with technical aspects of automation such as dealing with behaviour repetition and the code implications of it, having reusable steps certainly help keep code DRY! However BDD is not pure math, there are a lot of reasons and contexts where it is indifferent or even not advisable to use it. Make your own judgement based on the many articles on the matter, if you decide to go with it then this repo is a great start. If not you may find this [repo](https://github.com/matiasleandronunez/typescript_automation_suite) useful, or I've also [branched an early version this repo](https://github.com/matiasleandronunez/playwright_ts_with_bdd/tree/release/without_bdd) before implementing BDD.
