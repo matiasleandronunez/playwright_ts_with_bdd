@@ -6,9 +6,11 @@ import {AccountPage} from "../pages/accountPage";
 import {FilterComponent, FilterComponentDesktop, FilterComponentResponsive} from "../pages/filterComponent";
 import {SearchResultsPage} from "../pages/searchResultsPage";
 import {DataSchema} from "../helpers/typesHelper";
+import {APIResponse} from "@playwright/test";
 
 export class TestContext{
     dataBag : [name: string, data: DataSchema][];
+    savedResponse : APIResponse;
 
     constructor() {
         this.dataBag = [];
@@ -20,6 +22,14 @@ export class TestContext{
 
     getData(key) : DataSchema{
         return this.dataBag.filter(d => d[0] === key)[0][1];
+    }
+
+    saveResponse(resp : APIResponse){
+        this.savedResponse = resp;
+    }
+
+    retrieveResponse(){
+        return this.savedResponse;
     }
 }
 
