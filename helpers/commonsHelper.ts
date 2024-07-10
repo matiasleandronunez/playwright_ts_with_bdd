@@ -10,3 +10,7 @@ export function priceStringToFloat(priceString : string){
 export function delay(ms: number){
     return new Promise( resolve => setTimeout(resolve, ms) );
 }
+
+export function getRandomItem<T>(array : Array<T>) : T {
+    return array[Math.trunc(Math.random() * array.length)];
+}

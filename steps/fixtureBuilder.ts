@@ -5,6 +5,23 @@ import {MainMenuComponent, MainMenuComponentDesktop, MainMenuComponentResponsive
 import {AccountPage} from "../pages/accountPage";
 import {FilterComponent, FilterComponentDesktop, FilterComponentResponsive} from "../pages/filterComponent";
 import {SearchResultsPage} from "../pages/searchResultsPage";
+import {DataSchema} from "../helpers/typesHelper";
+
+export class TestContext{
+    dataBag : [name: string, data: DataSchema][];
+
+    constructor() {
+        this.dataBag = [];
+    }
+
+    storeData(name : string, data : DataSchema){
+        this.dataBag.push([name, data]);
+    };
+
+    getData(key) : DataSchema{
+        return this.dataBag.filter(d => d[0] === key)[0][1];
+    }
+}
 
 // declare the types of your fixtures
 interface PageObjects {
@@ -20,10 +37,21 @@ export type TestOptions = {
     isResponsive: boolean;
 };
 
+export type TestConstrains = {
+    testContext : TestContext;
+}
+
 // extend base test to be used in multiple test files. Each of them will get the fixtures
-export const test = base.extend<TestOptions & PageObjects>({
+export const test = base.extend<TestOptions & PageObjects & TestConstrains>({
     isResponsive: [true, { option: true }],
 
+    // TEST CONSTRAINS
+    testContext: async ({ page }, use) => {
+        const testContext = new TestContext();
+        await use(testContext);
+    },
+
+    // PAGE OBJECTS
     homePage: async ({ page }, use) => {
         const homePage = new HomePage(page);
         await use(homePage);
