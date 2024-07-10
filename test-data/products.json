@@ -1,0 +1,62 @@
+{ "productData":
+  [
+    {
+      "id": "01J2CMQSHRB5QW6D1562MKCE0C",
+      "name": "Combination Pliers",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra felis nec pellentesque feugiat. Donec faucibus arcu maximus, convallis nisl eu, placerat dolor. Morbi finibus neque nec tincidunt pharetra. Sed eget tortor malesuada, mollis enim id, condimentum nisi. In viverra quam at bibendum ultricies. Aliquam quis eros ex. Etiam at pretium massa, ut pharetra tortor. Sed vel metus sem. Suspendisse ac molestie turpis. Duis luctus justo massa, faucibus ornare eros elementum et. Vestibulum quis nisl vitae ante dapibus tempor auctor ut leo. Mauris consectetur et magna at ultricies. Proin a aliquet turpis.",
+      "price": 14.15,
+      "is_location_offer": false,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2CMQSHJMVXF4SAVCAH5RDZ9",
+        "by_name": "Helinton Fantin",
+        "by_url": "https://unsplash.com/@fantin",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/W8BNwvOvW4M",
+        "file_name": "pliers01.jpeg",
+        "title": "Combination pliers"
+      },
+      "category": {
+        "id": "01J2CMQSHE5SBCV426NYYSSEF6",
+        "name": "Pliers",
+        "slug": "pliers",
+        "parent_id": "01J2CMQSHAPD8F4J8PZENXHKRY"
+      },
+      "brand": {
+        "id": "01J2CMQSH4K9SHCD8D6QMFRVWZ",
+        "name": "ForgeFlex Tools",
+        "slug": "forgeflex-tools"
+      }
+    },
+    {
+      "id": "01J2CR5N7SBMG4YNQZZDKQ2EPG",
+      "name": "Bolt Cutters",
+      "description": "Aliquam viverra scelerisque tempus. Ut vehicula, ex sed elementum rhoncus, sem neque vehicula turpis, sit amet accumsan mauris justo non magna. Cras ut vulputate lectus, sit amet sollicitudin enim. Quisque sit amet turpis ut orci pulvinar vestibulum non at velit. Quisque ultrices malesuada felis non rutrum. Sed molestie lobortis nisl, in varius arcu dictum vel. In sit amet fringilla orci. Quisque ac magna dui. Nam pulvinar nulla sed commodo ultricies. Suspendisse aliquet quis eros sit amet gravida. Aenean vitae arcu in sapien sodales commodo.",
+      "price": 48.41,
+      "is_location_offer": true,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2CR5N7GZ2RA2PJG7XNK9JD0",
+        "by_name": "Michael Dziedzic",
+        "by_url": "https://unsplash.com/@lazycreekimages",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/pM9pkc9J918",
+        "file_name": "pliers03.jpeg",
+        "title": "Bolt cutters"
+      },
+      "category": {
+        "id": "01J2CR5N7C704AZZZD95MX62F8",
+        "name": "Pliers",
+        "slug": "pliers",
+        "parent_id": "01J2CR5N78HDA9EXJHR9HXV7WY"
+      },
+      "brand": {
+        "id": "01J2CR5N72S9MT6J2H6HPWDZM6",
+        "name": "MightyCraft Hardware",
+        "slug": "mightycraft-hardware"
+      }
+    }
+  ]
+}
