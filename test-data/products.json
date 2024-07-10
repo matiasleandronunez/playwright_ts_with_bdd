@@ -1,0 +1,62 @@
+{ "productData":
+  [
+    {
+      "id": "01J2EF3FVFEXSPZY1GA5RTDXHG",
+      "name": "Bolt Cutters",
+      "description": "Aliquam viverra scelerisque tempus. Ut vehicula, ex sed elementum rhoncus, sem neque vehicula turpis, sit amet accumsan mauris justo non magna. Cras ut vulputate lectus, sit amet sollicitudin enim. Quisque sit amet turpis ut orci pulvinar vestibulum non at velit. Quisque ultrices malesuada felis non rutrum. Sed molestie lobortis nisl, in varius arcu dictum vel. In sit amet fringilla orci. Quisque ac magna dui. Nam pulvinar nulla sed commodo ultricies. Suspendisse aliquet quis eros sit amet gravida. Aenean vitae arcu in sapien sodales commodo.",
+      "price": 48.41,
+      "is_location_offer": true,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2EF3FV65TNSE7DQVS46S8PK",
+        "by_name": "Michael Dziedzic",
+        "by_url": "https://unsplash.com/@lazycreekimages",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/pM9pkc9J918",
+        "file_name": "pliers03.jpeg",
+        "title": "Bolt cutters"
+      },
+      "category": {
+        "id": "01J2EF3FV22DNKF56F1ECZZXC4",
+        "name": "Pliers",
+        "slug": "pliers",
+        "parent_id": "01J2EF3FTZ85KQ36BX9YM4NJHC"
+      },
+      "brand": {
+        "id": "01J2EF3FTS9X6JM3DTYCHMFN7J",
+        "name": "MightyCraft Hardware",
+        "slug": "mightycraft-hardware"
+      }
+    },
+    {
+      "id": "01J2EF3FVPB49AP3JCTTQCXBNG",
+      "name": "Claw Hammer",
+      "description": "Cras pulvinar nisl a quam fringilla tempus. Sed lectus urna, mattis quis arcu eget, aliquam laoreet mauris. Praesent accumsan facilisis eros, ac mattis nulla interdum nec. Phasellus ultrices eu metus in lobortis. Donec ac efficitur orci. Phasellus nulla neque, congue nec tincidunt id, ultrices vel sapien. Curabitur gravida ex leo, laoreet mollis arcu blandit vel.",
+      "price": 11.48,
+      "is_location_offer": true,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2EF3FV65TNSE7DQVS46S8PR",
+        "by_name": "Andrew George",
+        "by_url": "https://unsplash.com/@andrewjoegeorge",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/YU2mCvXR0wA",
+        "file_name": "hammer03.jpeg",
+        "title": "Claw Hammer"
+      },
+      "category": {
+        "id": "01J2EF3FV22DNKF56F1ECZZXC0",
+        "name": "Hammer",
+        "slug": "hammer",
+        "parent_id": "01J2EF3FTZ85KQ36BX9YM4NJHC"
+      },
+      "brand": {
+        "id": "01J2EF3FTS9X6JM3DTYCHMFN7J",
+        "name": "MightyCraft Hardware",
+        "slug": "mightycraft-hardware"
+      }
+    }
+  ]
+}

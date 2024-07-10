@@ -47,10 +47,20 @@ export default defineConfig<TestOptions>({
             name: 'authenticate',
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
-                outputDir: '.test-results/authenticate',
+                outputDir: '.test-results/user',
                 importTestFrom: './steps/fixtureBuilder.ts',
-                paths: ['./features/authenticate/*.feature'],
-                require: ['./steps/authenticate/*.ts'],
+                paths: ['./features/backend/user.feature'],
+                require: ['./steps/backend/*.ts'],
+            }),
+        },
+        {
+            name: 'backend',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/product',
+                importTestFrom: './steps/fixtureBuilder.ts',
+                paths: ['./features/backend/product.feature'],
+                require: ['./steps/backend/*.ts'],
             }),
         },
         {

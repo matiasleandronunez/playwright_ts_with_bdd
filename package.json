@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx bddgen && npx playwright test --reporter=list --config=playwright.config.ts",
+    "test-grep": "npx bddgen && npx playwright test --reporter=list --config=playwright.config.ts --grep ",
     "test-secuential": "npx bddgen && npx playwright test --reporter=list --config=playwright.config.ts --workers=1",
     "debug": "npx bddgen && npm run test -- --workers=1 --debug",
     "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"npx bddgen\"",
