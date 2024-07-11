@@ -48,5 +48,5 @@ Once in the container, you will land in the working directory ```/automation``` 
 sh ./run_regression.sh
 ```
 
-### Execute in workflow with Github Actions
-There's a GH worflow .yml file included for convinience and to serve as practical example if automation needs to be implemented in a pipeline. To use it fork this repo and run the workflow from a dispatch event (It's also configured to run on some pull request triggers)
+### Execute in workflow with GitHub Actions
+There's a GitHub workflow .yml file included for convenience and to serve as practical example if automation needs to be implemented in a pipeline. To use it fork this repo and run the workflow from a dispatch event (It's also configured to run on some pull request triggers)
