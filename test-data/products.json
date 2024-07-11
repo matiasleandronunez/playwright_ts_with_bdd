@@ -1,7 +1,65 @@
 { "productData":
   [
     {
-      "id": "01J2EF3FVFEXSPZY1GA5RTDXHG",
+      "id": "01J2FR9W9KKN3G938TBKMRBM9K",
+      "name": "Combination Pliers",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra felis nec pellentesque feugiat. Donec faucibus arcu maximus, convallis nisl eu, placerat dolor. Morbi finibus neque nec tincidunt pharetra. Sed eget tortor malesuada, mollis enim id, condimentum nisi. In viverra quam at bibendum ultricies. Aliquam quis eros ex. Etiam at pretium massa, ut pharetra tortor. Sed vel metus sem. Suspendisse ac molestie turpis. Duis luctus justo massa, faucibus ornare eros elementum et. Vestibulum quis nisl vitae ante dapibus tempor auctor ut leo. Mauris consectetur et magna at ultricies. Proin a aliquet turpis.",
+      "price": 14.15,
+      "is_location_offer": false,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2FR9W9A2H2E71BFER7QD38H",
+        "by_name": "Helinton Fantin",
+        "by_url": "https://unsplash.com/@fantin",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/W8BNwvOvW4M",
+        "file_name": "pliers01.jpeg",
+        "title": "Combination pliers"
+      },
+      "category": {
+        "id": "01J2FR9W93B2S5ZGYF5J1363BS",
+        "name": "Pliers",
+        "slug": "pliers",
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
+      },
+      "brand": {
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXT",
+        "name": "ForgeFlex Tools",
+        "slug": "forgeflex-tools"
+      }
+    },
+    {
+      "id": "01J2FR9W9SWAGH6QPC6JCWBCTQ",
+      "name": "Pliers",
+      "description": "Nunc vulputate, orci at congue faucibus, enim neque sodales nulla, nec imperdiet augue odio vel nibh. Etiam auctor, ligula quis gravida dictum, mi massa commodo ante, sollicitudin pulvinar nulla justo hendrerit lacus. Vivamus rutrum pharetra molestie. Fusce tristique odio tristique, elementum est eget, porttitor diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas at ligula sed sapien porta pretium. Aenean cursus, magna in blandit consectetur, libero orci aliquet eros, et maximus nunc est eu dolor. Aenean non pellentesque eros. In sodales orci eget orci fringilla, vitae feugiat elit porta. Etiam aliquam, mi pretium tempus mattis, mauris ipsum gravida risus, at tempor nulla ipsum molestie ligula. Ut placerat, urna sit amet tincidunt volutpat, ex orci luctus purus, nec laoreet dolor sapien vel erat.",
+      "price": 12.01,
+      "is_location_offer": false,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2FR9W9A2H2E71BFER7QD38J",
+        "by_name": "Everyday basics",
+        "by_url": "https://unsplash.com/@zanardi",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/I8eTuMmxIfo",
+        "file_name": "pliers02.jpeg",
+        "title": "Pliers"
+      },
+      "category": {
+        "id": "01J2FR9W93B2S5ZGYF5J1363BS",
+        "name": "Pliers",
+        "slug": "pliers",
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
+      },
+      "brand": {
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXT",
+        "name": "ForgeFlex Tools",
+        "slug": "forgeflex-tools"
+      }
+    },
+    {
+      "id": "01J2FR9W9VPSJZ4C5RAWPW32D6",
       "name": "Bolt Cutters",
       "description": "Aliquam viverra scelerisque tempus. Ut vehicula, ex sed elementum rhoncus, sem neque vehicula turpis, sit amet accumsan mauris justo non magna. Cras ut vulputate lectus, sit amet sollicitudin enim. Quisque sit amet turpis ut orci pulvinar vestibulum non at velit. Quisque ultrices malesuada felis non rutrum. Sed molestie lobortis nisl, in varius arcu dictum vel. In sit amet fringilla orci. Quisque ac magna dui. Nam pulvinar nulla sed commodo ultricies. Suspendisse aliquet quis eros sit amet gravida. Aenean vitae arcu in sapien sodales commodo.",
       "price": 48.41,
@@ -9,7 +67,7 @@
       "is_rental": false,
       "in_stock": true,
       "product_image": {
-        "id": "01J2EF3FV65TNSE7DQVS46S8PK",
+        "id": "01J2FR9W9A2H2E71BFER7QD38K",
         "by_name": "Michael Dziedzic",
         "by_url": "https://unsplash.com/@lazycreekimages",
         "source_name": "Unsplash",
@@ -18,19 +76,135 @@
         "title": "Bolt cutters"
       },
       "category": {
-        "id": "01J2EF3FV22DNKF56F1ECZZXC4",
+        "id": "01J2FR9W93B2S5ZGYF5J1363BS",
         "name": "Pliers",
         "slug": "pliers",
-        "parent_id": "01J2EF3FTZ85KQ36BX9YM4NJHC"
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
       },
       "brand": {
-        "id": "01J2EF3FTS9X6JM3DTYCHMFN7J",
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXV",
         "name": "MightyCraft Hardware",
         "slug": "mightycraft-hardware"
       }
     },
     {
-      "id": "01J2EF3FVPB49AP3JCTTQCXBNG",
+      "id": "01J2FR9W9WG9YX9N6M7Q0E0YN8",
+      "name": "Long Nose Pliers",
+      "description": "Phasellus consequat fermentum quam id sodales. Curabitur nec dui orci. Fusce id turpis laoreet, lobortis ex non, finibus libero. Vivamus id enim eu nibh placerat maximus. Aenean semper dui a laoreet venenatis. Vestibulum at ligula quam. Donec interdum tristique neque lacinia laoreet. Sed auctor fermentum congue. Integer aliquet vulputate feugiat. Quisque malesuada diam iaculis ornare maximus. Mauris quam massa, sodales at mattis non, consectetur eget magna. Aliquam eget congue metus, sed congue leo. Nam sit amet est id ligula volutpat pharetra non id nisl. Vestibulum ac enim vitae nisi tempus cursus. Aliquam erat volutpat.",
+      "price": 14.24,
+      "is_location_offer": false,
+      "is_rental": false,
+      "in_stock": false,
+      "product_image": {
+        "id": "01J2FR9W9A2H2E71BFER7QD38M",
+        "by_name": "Brett Jordan",
+        "by_url": "https://unsplash.com/@brett_jordan",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/GamuDTVm02g",
+        "file_name": "pliers04.jpeg",
+        "title": "Long nose pliers"
+      },
+      "category": {
+        "id": "01J2FR9W93B2S5ZGYF5J1363BS",
+        "name": "Pliers",
+        "slug": "pliers",
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
+      },
+      "brand": {
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXV",
+        "name": "MightyCraft Hardware",
+        "slug": "mightycraft-hardware"
+      }
+    },
+    {
+      "id": "01J2FR9WA0Z4TNEZ8G8YCNNAMH",
+      "name": "Slip Joint Pliers",
+      "description": "Ut cursus dui non ante convallis, facilisis auctor leo luctus. Maecenas a rhoncus metus. Sed in efficitur dolor, vulputate accumsan odio. Sed ex quam, dictum in fringilla at, vestibulum eu sem. Quisque ante orci, vulputate non porttitor eu, aliquet et nunc. Nunc a rhoncus dui. Nunc ac est non eros scelerisque maximus at a eros. Phasellus sed egestas diam, at tempus erat. Morbi sit amet congue tellus, at accumsan magna. Etiam non ornare nisl, sed luctus nisi. Pellentesque ut odio ut sapien aliquet eleifend.",
+      "price": 9.17,
+      "is_location_offer": false,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2FR9W9A2H2E71BFER7QD38N",
+        "by_name": "Yasin Hasan",
+        "by_url": "https://unsplash.com/@yasin",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/dwlxTSpfKXg",
+        "file_name": "pliers05.jpeg",
+        "title": "Slip joint pliers"
+      },
+      "category": {
+        "id": "01J2FR9W93B2S5ZGYF5J1363BS",
+        "name": "Pliers",
+        "slug": "pliers",
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
+      },
+      "brand": {
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXV",
+        "name": "MightyCraft Hardware",
+        "slug": "mightycraft-hardware"
+      }
+    },
+    {
+      "id": "01J2FR9WA6N3Z4BS5E41SVB8WQ",
+      "name": "Claw Hammer with Shock Reduction Grip",
+      "description": "Nam efficitur, turpis molestie bibendum lobortis, risus arcu congue tortor, id consequat nibh sem a libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean non tincidunt tortor, vel ultricies tortor. Vivamus pulvinar efficitur arcu sit amet accumsan. Aenean dui erat, bibendum at dapibus in, feugiat non eros. Duis sodales felis ex, quis ullamcorper odio interdum non. Ut viverra magna eu augue luctus, quis convallis lectus auctor. Duis ultrices erat urna. Aliquam augue odio, mattis vitae finibus in, pellentesque nec dui. Curabitur nec odio in augue posuere posuere. Vivamus ante est, iaculis ut interdum et, hendrerit ac ante. Fusce ac venenatis neque, id fermentum nulla. Quisque tristique ornare nisi, vitae convallis dui faucibus quis. Vestibulum vel dapibus dolor.",
+      "price": 13.41,
+      "is_location_offer": true,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2FR9W9A2H2E71BFER7QD38P",
+        "by_name": "iMattSmart",
+        "by_url": "https://unsplash.com/@imattsmart",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/jaLaLQdkBOE",
+        "file_name": "hammer01.jpeg",
+        "title": "Claw Hammer"
+      },
+      "category": {
+        "id": "01J2FR9W922MSRCSBJ0SGXX7J8",
+        "name": "Hammer",
+        "slug": "hammer",
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
+      },
+      "brand": {
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXT",
+        "name": "ForgeFlex Tools",
+        "slug": "forgeflex-tools"
+      }
+    },
+    {
+      "id": "01J2FR9WAA0P4PD3T0BBED4P2S",
+      "name": "Hammer",
+      "description": "Mauris mollis odio est, ac vehicula dui lobortis vel. Cras facilisis, mauris ut vehicula dignissim, ex nunc sollicitudin velit, a fermentum mi odio ut massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a sapien vel libero fermentum rhoncus. Etiam ac imperdiet arcu, ac accumsan risus. Fusce vitae lacinia sem, sit amet sagittis lorem. Curabitur efficitur ultricies sem, eu placerat ante tincidunt a. Morbi faucibus ullamcorper mi a mollis. Aenean sed magna aliquam, mollis dui at, condimentum ex. Donec blandit bibendum enim, lacinia vestibulum tellus laoreet sollicitudin. In vitae ullamcorper metus, ut interdum augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam scelerisque dignissim varius. Nulla facilisi. Praesent eros dolor, ultricies sit amet pellentesque porttitor, pretium ut lectus. Nullam tempus tellus sapien, non condimentum mauris volutpat eget.",
+      "price": 12.58,
+      "is_location_offer": false,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2FR9W9A2H2E71BFER7QD38Q",
+        "by_name": "Jozsef Hocza",
+        "by_url": "https://unsplash.com/@hocza",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/D3nouOYbALc",
+        "file_name": "hammer02.jpeg",
+        "title": "Hammer"
+      },
+      "category": {
+        "id": "01J2FR9W922MSRCSBJ0SGXX7J8",
+        "name": "Hammer",
+        "slug": "hammer",
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
+      },
+      "brand": {
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXT",
+        "name": "ForgeFlex Tools",
+        "slug": "forgeflex-tools"
+      }
+    },
+    {
+      "id": "01J2FR9WABA92AF9V4K97J3512",
       "name": "Claw Hammer",
       "description": "Cras pulvinar nisl a quam fringilla tempus. Sed lectus urna, mattis quis arcu eget, aliquam laoreet mauris. Praesent accumsan facilisis eros, ac mattis nulla interdum nec. Phasellus ultrices eu metus in lobortis. Donec ac efficitur orci. Phasellus nulla neque, congue nec tincidunt id, ultrices vel sapien. Curabitur gravida ex leo, laoreet mollis arcu blandit vel.",
       "price": 11.48,
@@ -38,7 +212,7 @@
       "is_rental": false,
       "in_stock": true,
       "product_image": {
-        "id": "01J2EF3FV65TNSE7DQVS46S8PR",
+        "id": "01J2FR9W9A2H2E71BFER7QD38R",
         "by_name": "Andrew George",
         "by_url": "https://unsplash.com/@andrewjoegeorge",
         "source_name": "Unsplash",
@@ -47,15 +221,44 @@
         "title": "Claw Hammer"
       },
       "category": {
-        "id": "01J2EF3FV22DNKF56F1ECZZXC0",
+        "id": "01J2FR9W922MSRCSBJ0SGXX7J8",
         "name": "Hammer",
         "slug": "hammer",
-        "parent_id": "01J2EF3FTZ85KQ36BX9YM4NJHC"
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
       },
       "brand": {
-        "id": "01J2EF3FTS9X6JM3DTYCHMFN7J",
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXV",
         "name": "MightyCraft Hardware",
         "slug": "mightycraft-hardware"
+      }
+    },
+    {
+      "id": "01J2FR9WAENMT7VCB23VH4TB2A",
+      "name": "Thor Hammer",
+      "description": "Donec malesuada tempus purus. Integer sit amet arcu magna. Sed vel laoreet ligula, non sollicitudin ex. Mauris euismod ac dolor venenatis lobortis. Aliquam iaculis at diam nec accumsan. Ut sodales sed elit et imperdiet. Maecenas vitae molestie mauris. Integer quis placerat libero, in finibus diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "price": 11.14,
+      "is_location_offer": false,
+      "is_rental": false,
+      "in_stock": true,
+      "product_image": {
+        "id": "01J2FR9W9A2H2E71BFER7QD38S",
+        "by_name": "ANIRUDH",
+        "by_url": "https://unsplash.com/@lanirudhreddy",
+        "source_name": "Unsplash",
+        "source_url": "https://unsplash.com/photos/3esjG-nlgyk",
+        "file_name": "hammer04.jpeg",
+        "title": "Hammer"
+      },
+      "category": {
+        "id": "01J2FR9W922MSRCSBJ0SGXX7J8",
+        "name": "Hammer",
+        "slug": "hammer",
+        "parent_id": "01J2FR9W8XX4RP709VT5KQEVEV"
+      },
+      "brand": {
+        "id": "01J2FR9W8K2T5HJNF34S8RAKXT",
+        "name": "ForgeFlex Tools",
+        "slug": "forgeflex-tools"
       }
     }
   ]
