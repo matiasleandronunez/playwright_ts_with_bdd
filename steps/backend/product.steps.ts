@@ -6,7 +6,7 @@ import {extractTestCaseTagID, getRandomItem} from "../../helpers/commonsHelper";
 import {Brand, Category, Product} from "../../helpers/typesHelper";
 import { productData } from "../../test-data/products.json" ;
 
-const { Given, When, Then } = createBdd(test);
+const { Given, Then } = createBdd(test);
 
 Given(/^I request a product to the Product API querying by brand$/, async ({ testContext, request, $tags }) => {
 
@@ -92,7 +92,7 @@ Given(/^I request a product to the Product API querying by product id$/, async (
     testContext.saveResponse(response);
 });
 
-Given(/^I request a product to the Product API querying with a non existing product id$/, async ({ testContext, request, $tags }) => {
+Given(/^I request a product to the Product API querying with a non existing product id$/, async ({ testContext, request }) => {
 
     const response = await request.get(CONFIG.baseApiHost + `products/000000000000`,
         {
