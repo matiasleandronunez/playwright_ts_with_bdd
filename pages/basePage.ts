@@ -17,4 +17,13 @@ export class BasePage{
     async goto(url= CONFIG.baseHost) {
         await this.page.goto(url!);
     }
+
+    async clearCookies(){
+        await this.page.context().clearCookies();
+    }
+
+    async clearStorage(){
+        await this.page.evaluate(() => window.localStorage.clear());
+        await this.page.evaluate(() => window.sessionStorage.clear());
+    }
 }
