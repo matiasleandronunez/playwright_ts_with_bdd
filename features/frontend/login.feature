@@ -1,9 +1,12 @@
 @login_feature
 Feature: Login
 
-  @User_login_valid_user @LOG-001
-  Scenario: [LOG-001] User can sign in with valid user
+  Background:
+    Given I am not logged into the site
+
+  @User_login_wrong_password @LOG-002
+  Scenario: [LOG-002] User cant sign in with a wrong password
     Given I go to the landing page
     When I click on the sign in button in the menu
-    And I sign in with a valid user
-    Then I see the user dashboard displayed
+    And I sign in with a wrong password
+    Then I see a login error message displayed

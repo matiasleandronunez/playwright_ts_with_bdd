@@ -44,16 +44,6 @@ export default defineConfig<TestOptions>({
     // Configure projects for major browsers.
     projects: [
         {
-            name: 'authenticate',
-            testDir: defineBddConfig({
-                disableWarnings: { importTestFrom: true },
-                outputDir: '.test-results/user',
-                importTestFrom: './steps/fixtureBuilder.ts',
-                paths: ['./features/backend/user.feature'],
-                require: ['./steps/backend/*.ts'],
-            }),
-        },
-        {
             name: 'backend',
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
@@ -62,6 +52,21 @@ export default defineConfig<TestOptions>({
                 paths: ['./features/backend/product.feature'],
                 require: ['./steps/backend/*.ts'],
             }),
+        },
+        {
+            name: 'setup',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/user',
+                importTestFrom: './steps/fixtureBuilder.ts',
+                paths: ['./features/setup/setup.feature'],
+                require: ['./steps/frontend/*.ts'],
+            }),
+            use: { ...devices['Desktop Chrome'],
+                headless: process.env.USE_GUI != 'true',
+                isResponsive: false,
+            },
+            dependencies: ['backend'],
         },
         {
             name: 'frontend-chrome',
@@ -74,9 +79,10 @@ export default defineConfig<TestOptions>({
             }),
             use: { ...devices['Desktop Chrome'],
                 headless: process.env.USE_GUI != 'true',
+                storageState: './test-data/.auth',
                 isResponsive: false,
             },
-            dependencies: ['authenticate'],
+            dependencies: ['setup'],
         },
         {
             name: 'safari-responsive',
@@ -90,8 +96,9 @@ export default defineConfig<TestOptions>({
             use: { ...devices['iPhone 13'],
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: true,
+                storageState: './test-data/.auth',
             },
-            dependencies: ['authenticate'],
+            dependencies: ['setup'],
         },
     ],
 
