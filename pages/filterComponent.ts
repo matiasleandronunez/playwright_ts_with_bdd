@@ -1,5 +1,6 @@
 import { type Locator, type Page } from '@playwright/test';
 import { BasePage} from "./basePage";
+import {CONFIG} from "../variables.config";
 
 export class FilterComponent extends BasePage{
     readonly handToolsCb: Locator;
@@ -69,6 +70,16 @@ export class FilterComponent extends BasePage{
         await this.page.mouse.down();
         await this.page.mouse.move((sliderPickerMinBox?.x + sliderPickerMinBox?.width / 2) + minSliderOffset, sliderPickerMinBox?.y + sliderPickerMinBox?.height / 2)
         await this.page.mouse.up();
+    }
+
+    async mockProductSearchAPIUnavailable(){
+        await this.page.route(`${CONFIG.baseApiHost}products/search`, async route => {
+            await route.fulfill({
+                status: 503,
+                contentType: 'text/plain',
+                body: 'Service Unavailable'
+            });
+        });
     }
 }
 

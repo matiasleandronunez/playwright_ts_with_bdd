@@ -44,16 +44,6 @@ export default defineConfig<TestOptions>({
     // Configure projects for major browsers.
     projects: [
         {
-            name: 'backend',
-            testDir: defineBddConfig({
-                disableWarnings: { importTestFrom: true },
-                outputDir: '.test-results/product',
-                importTestFrom: './steps/fixtureBuilder.ts',
-                paths: ['./features/backend/product.feature'],
-                require: ['./steps/backend/*.ts'],
-            }),
-        },
-        {
             name: 'setup',
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
@@ -66,7 +56,17 @@ export default defineConfig<TestOptions>({
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: false,
             },
-            dependencies: ['backend'],
+        },
+        {
+            name: 'backend',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/product',
+                importTestFrom: './steps/fixtureBuilder.ts',
+                paths: ['./features/backend/product.feature'],
+                require: ['./steps/backend/*.ts'],
+            }),
+            dependencies: ['setup'],
         },
         {
             name: 'frontend-chrome',
@@ -97,6 +97,22 @@ export default defineConfig<TestOptions>({
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: true,
                 storageState: './test-data/.auth',
+            },
+            dependencies: ['setup'],
+        },
+        {
+            name: 'non-functional',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/non-functional',
+                importTestFrom: './steps/fixtureBuilder.ts',
+                paths: ['./features/non-functional/*.feature'],
+                require: ['./steps/**/*.ts'],
+            }),
+            use: { ...devices['Desktop Chrome'],
+                headless: process.env.USE_GUI != 'true',
+                storageState: './test-data/.auth',
+                isResponsive: false,
             },
             dependencies: ['setup'],
         },
