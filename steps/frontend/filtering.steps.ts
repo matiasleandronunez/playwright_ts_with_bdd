@@ -1,4 +1,4 @@
-import { expect, test } from '../fixtureBuilder';
+import { expect, test } from '../../fixtures/fixtureBuilder';
 import { createBdd } from 'playwright-bdd';
 
 const { When, Then } = createBdd(test);

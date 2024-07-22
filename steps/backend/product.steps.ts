@@ -1,12 +1,12 @@
 import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
-import { test } from '../fixtureBuilder';
+import { test } from '../../fixtures/fixtureBuilder';
 import {CONFIG} from "../../variables.config";
 import {extractTestCaseTagID, getRandomItem} from "../../helpers/commonsHelper";
 import {Brand, Category, Product} from "../../helpers/typesHelper";
 import { productData } from "../../test-data/products.json" ;
 
-const { Given, When, Then } = createBdd(test);
+const { Given, Then } = createBdd(test);
 
 Given(/^I request a product to the Product API querying by brand$/, async ({ testContext, request, $tags }) => {
 

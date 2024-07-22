@@ -1,7 +1,7 @@
 @filtering_feature
 Feature: Filtering
 
-  @filter_products_by_name @FIL-001
+  @filter_products_by_name @FIL-001 @user
   Scenario Outline: [FIL-001] User can filter products by name
     Given I go to the landing page
     When I search product <product> by its name
@@ -12,7 +12,7 @@ Feature: Filtering
       |Pliers     |
       |Claw Hammer|
 
-  @filter_products_by_price_range @FIL-002
+  @filter_products_by_price_range @FIL-002 @user
   Scenario Outline: [FIL-002] User can filter products by price range
     Given I go to the landing page
     When I filter by the price range around <price>
