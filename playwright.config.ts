@@ -44,16 +44,6 @@ export default defineConfig<TestOptions>({
     // Configure projects for major browsers.
     projects: [
         {
-            name: 'backend',
-            testDir: defineBddConfig({
-                disableWarnings: { importTestFrom: true },
-                outputDir: '.test-results/product',
-                importTestFrom: './fixtures/fixtureBuilder.ts',
-                paths: ['./features/backend/product.feature'],
-                require: ['./steps/backend/*.ts'],
-            }),
-        },
-        {
             name: 'setup',
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
@@ -66,7 +56,17 @@ export default defineConfig<TestOptions>({
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: false,
             },
-            dependencies: ['backend'],
+        },
+        {
+            name: 'backend',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/product',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
+                paths: ['./features/backend/product.feature'],
+                require: ['./steps/backend/*.ts'],
+            }),
+            dependencies: ['setup'],
         },
         {
             name: 'frontend-chrome',
@@ -79,6 +79,7 @@ export default defineConfig<TestOptions>({
             }),
             use: { ...devices['Desktop Chrome'],
                 headless: process.env.USE_GUI != 'true',
+                storageState: './test-data/.auth',
                 isResponsive: false,
             },
             dependencies: ['setup'],
@@ -95,6 +96,7 @@ export default defineConfig<TestOptions>({
             use: { ...devices['iPhone 13'],
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: true,
+                storageState: './test-data/.auth',
             },
             dependencies: ['setup'],
         },
