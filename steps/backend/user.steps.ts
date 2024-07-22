@@ -6,7 +6,7 @@ import {CONFIG} from "../../variables.config";
 import { userData } from "../../test-data/users.json" ;
 
 
-const { Given, When, Then } = createBdd(test);
+const { Given, Then } = createBdd(test);
 
 Given('I sign into the site through the API with a valid user', async ({ request }) => {
     const regularUser : User | undefined = userData.find(t => t.role === 'user');

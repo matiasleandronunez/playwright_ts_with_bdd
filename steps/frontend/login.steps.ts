@@ -6,7 +6,7 @@ import path from "node:path";
 
 const { Given, When, Then } = createBdd(test);
 
-const goToHome = Given('I go to the landing page', async ({ homePage }) => {
+Given('I go to the landing page', async ({ homePage }) => {
     await homePage.goto();
 });
 

@@ -56,7 +56,7 @@ export type TestConstrains = {
 export const test = base.extend<TestOptions & PageObjects & TestConstrains>({
     isResponsive: [true, { option: true }],
 
-    storageState: async ({ $tags }, use, testInfo) => {
+    storageState: async ({ $tags }, use) => {
         const user_auth_storage_state = path.join(__dirname, "../test-data/.auth");
 
         if ($tags.includes('@user')) {
