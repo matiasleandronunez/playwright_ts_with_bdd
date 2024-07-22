@@ -1,4 +1,4 @@
-import { expect, test } from '../fixtureBuilder';
+import { expect, test } from '../../fixtures/fixtureBuilder';
 import { userData } from "../../test-data/users.json" ;
 import { User } from "../../helpers/typesHelper";
 import { createBdd } from 'playwright-bdd';

@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
-import { test } from '../fixtureBuilder';
+import { test } from '../../fixtures/fixtureBuilder';
 import {User} from "../../helpers/typesHelper";
 import {CONFIG} from "../../variables.config";
 import { userData } from "../../test-data/users.json" ;

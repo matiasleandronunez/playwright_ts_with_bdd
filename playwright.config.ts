@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
-import type { TestOptions } from './steps/fixtureBuilder';
+import type { TestOptions } from './fixtures/fixtureBuilder';
 
 require('dotenv').config();
 
@@ -48,7 +48,7 @@ export default defineConfig<TestOptions>({
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/product',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/backend/product.feature'],
                 require: ['./steps/backend/*.ts'],
             }),
@@ -58,7 +58,7 @@ export default defineConfig<TestOptions>({
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/user',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/setup/setup.feature'],
                 require: ['./steps/frontend/*.ts'],
             }),
@@ -73,13 +73,12 @@ export default defineConfig<TestOptions>({
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/frontend-chrome',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/frontend/*.feature'],
                 require: ['./steps/frontend/*.ts'],
             }),
             use: { ...devices['Desktop Chrome'],
                 headless: process.env.USE_GUI != 'true',
-                storageState: './test-data/.auth',
                 isResponsive: false,
             },
             dependencies: ['setup'],
@@ -89,14 +88,13 @@ export default defineConfig<TestOptions>({
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/safari-responsive',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/frontend/*.feature'],
                 require: ['./steps/frontend/*.ts'],
             }),
             use: { ...devices['iPhone 13'],
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: true,
-                storageState: './test-data/.auth',
             },
             dependencies: ['setup'],
         },

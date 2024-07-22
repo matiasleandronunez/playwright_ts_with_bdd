@@ -7,6 +7,7 @@ import {FilterComponent, FilterComponentDesktop, FilterComponentResponsive} from
 import {SearchResultsPage} from "../pages/searchResultsPage";
 import {DataSchema} from "../helpers/typesHelper";
 import {APIResponse} from "@playwright/test";
+import path from "node:path";
 
 export class TestContext{
     dataBag : [name: string, data: DataSchema][];
@@ -54,6 +55,16 @@ export type TestConstrains = {
 // extend base test to be used in multiple test files. Each of them will get the fixtures
 export const test = base.extend<TestOptions & PageObjects & TestConstrains>({
     isResponsive: [true, { option: true }],
+
+    storageState: async ({ $tags }, use, testInfo) => {
+        const user_auth_storage_state = path.join(__dirname, "../test-data/.auth");
+
+        if ($tags.includes('@user')) {
+            await use(user_auth_storage_state);
+        } else {
+            await use({ cookies: [], origins: [] });
+        }
+    },
 
     // TEST CONSTRAINS
     testContext: async ({ page }, use) => {

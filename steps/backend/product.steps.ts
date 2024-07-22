@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
-import { test } from '../fixtureBuilder';
+import { test } from '../../fixtures/fixtureBuilder';
 import {CONFIG} from "../../variables.config";
 import {extractTestCaseTagID, getRandomItem} from "../../helpers/commonsHelper";
 import {Brand, Category, Product} from "../../helpers/typesHelper";
