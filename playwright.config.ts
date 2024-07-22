@@ -105,7 +105,7 @@ export default defineConfig<TestOptions>({
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/non-functional',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/non-functional/*.feature'],
                 require: ['./steps/**/*.ts'],
             }),
