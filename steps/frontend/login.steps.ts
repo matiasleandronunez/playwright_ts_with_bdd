@@ -1,4 +1,4 @@
-import { expect, test } from '../fixtureBuilder';
+import { expect, test } from '../../fixtures/fixtureBuilder';
 import { userData } from "../../test-data/users.json" ;
 import { User } from "../../helpers/typesHelper";
 import { createBdd } from 'playwright-bdd';
@@ -6,7 +6,7 @@ import path from "node:path";
 
 const { Given, When, Then } = createBdd(test);
 
-const goToHome = Given('I go to the landing page', async ({ homePage }) => {
+Given('I go to the landing page', async ({ homePage }) => {
     await homePage.goto();
 });
 
@@ -43,9 +43,4 @@ When(/^I sign in with a wrong password$/, async ({ signInPage }) => {
 
 Then(/^I see a login error message displayed$/, async ({ signInPage }) => {
     await expect(signInPage.loginAlert).toHaveText('Invalid email or password');
-});
-
-Given(/^I am not logged into the site$/, async ({ homePage }) => {
-    await goToHome({homePage});
-    await homePage.clearStorage();
 });

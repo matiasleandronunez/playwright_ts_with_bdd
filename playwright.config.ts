@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
-import type { TestOptions } from './steps/fixtureBuilder';
+import type { TestOptions } from './fixtures/fixtureBuilder';
 
 require('dotenv').config();
 
@@ -44,21 +44,11 @@ export default defineConfig<TestOptions>({
     // Configure projects for major browsers.
     projects: [
         {
-            name: 'backend',
-            testDir: defineBddConfig({
-                disableWarnings: { importTestFrom: true },
-                outputDir: '.test-results/product',
-                importTestFrom: './steps/fixtureBuilder.ts',
-                paths: ['./features/backend/product.feature'],
-                require: ['./steps/backend/*.ts'],
-            }),
-        },
-        {
             name: 'setup',
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/user',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/setup/setup.feature'],
                 require: ['./steps/frontend/*.ts'],
             }),
@@ -66,14 +56,24 @@ export default defineConfig<TestOptions>({
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: false,
             },
-            dependencies: ['backend'],
+        },
+        {
+            name: 'backend',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/product',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
+                paths: ['./features/backend/product.feature'],
+                require: ['./steps/backend/*.ts'],
+            }),
+            dependencies: ['setup'],
         },
         {
             name: 'frontend-chrome',
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/frontend-chrome',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/frontend/*.feature'],
                 require: ['./steps/frontend/*.ts'],
             }),
@@ -89,7 +89,7 @@ export default defineConfig<TestOptions>({
             testDir: defineBddConfig({
                 disableWarnings: { importTestFrom: true },
                 outputDir: '.test-results/safari-responsive',
-                importTestFrom: './steps/fixtureBuilder.ts',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
                 paths: ['./features/frontend/*.feature'],
                 require: ['./steps/frontend/*.ts'],
             }),

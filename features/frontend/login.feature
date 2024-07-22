@@ -1,9 +1,6 @@
 @login_feature
 Feature: Login
 
-  Background:
-    Given I am not logged into the site
-
   @User_login_wrong_password @LOG-002
   Scenario: [LOG-002] User cant sign in with a wrong password
     Given I go to the landing page
