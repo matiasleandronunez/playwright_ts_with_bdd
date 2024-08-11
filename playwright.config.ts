@@ -25,6 +25,12 @@ export default defineConfig<TestOptions>({
         ['html', {  open: 'always' }]
     ],
 
+    // Whole test default maximum timeout
+    timeout: 60000,
+
+    // Expectations default timeout
+    expect: {timeout: 10000},
+
     use: {
         // Base URL to use in actions like `await page.goto('/')`.
         baseURL: 'http://127.0.0.1:3000',
