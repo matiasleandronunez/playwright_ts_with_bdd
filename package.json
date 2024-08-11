@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "npx bddgen && npx playwright test --reporter=list --config=playwright.config.ts",
+    "test-html-report": "npx bddgen && npx playwright test --reporter=html --config=playwright.config.ts",
     "test-grep": "npx bddgen && npx playwright test --reporter=list --config=playwright.config.ts --grep ",
     "test-secuential": "npx bddgen && npx playwright test --reporter=list --config=playwright.config.ts --workers=1",
     "debug": "npx bddgen && npm run test -- --workers=1 --debug",
     "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"npx bddgen\"",
-    "watch:pw": "playwright test --ui",
+    "watch:pw": "npx bddgen && npx playwright test --reporter=list --config=playwright.config.ts --ui --grep ",
     "watch": "run-p watch:*",
     "format": "prettier --write .",
     "lint": "eslint --fix . --ext .ts,.tsx"
@@ -19,7 +20,8 @@
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@playwright/test": "1.45.0",
+    "@playwright/test": "1.46.0",
+    "@axe-core/playwright": "^4.9.1",
     "@types/node": "20.11.10",
     "@typescript-eslint/eslint-plugin": "5.38.1",
     "eslint": "8.24.0",
@@ -30,7 +32,7 @@
     "eslint-plugin-promise": "6.0.1",
     "prettier": "2.7.1",
     "typescript": "^5.5.3",
-    "playwright-bdd": "^7.0.0-0",
+    "playwright-bdd": "^7.2.2",
     "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5"
   },

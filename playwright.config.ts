@@ -25,6 +25,12 @@ export default defineConfig<TestOptions>({
         ['html', {  open: 'always' }]
     ],
 
+    // Whole test default maximum timeout
+    timeout: 60000,
+
+    // Expectations default timeout
+    expect: {timeout: 10000},
+
     use: {
         // Base URL to use in actions like `await page.goto('/')`.
         baseURL: 'http://127.0.0.1:3000',
@@ -97,6 +103,22 @@ export default defineConfig<TestOptions>({
                 headless: process.env.USE_GUI != 'true',
                 isResponsive: true,
                 storageState: './test-data/.auth',
+            },
+            dependencies: ['setup'],
+        },
+        {
+            name: 'non-functional',
+            testDir: defineBddConfig({
+                disableWarnings: { importTestFrom: true },
+                outputDir: '.test-results/non-functional',
+                importTestFrom: './fixtures/fixtureBuilder.ts',
+                paths: ['./features/non-functional/*.feature'],
+                require: ['./steps/**/*.ts'],
+            }),
+            use: { ...devices['Desktop Chrome'],
+                headless: process.env.USE_GUI != 'true',
+                storageState: './test-data/.auth',
+                isResponsive: false,
             },
             dependencies: ['setup'],
         },
