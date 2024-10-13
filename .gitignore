@@ -1,2 +1,5 @@
 /test-results/*
 /node_modules/
+*.spec.js
+/playwright-report/
+/test-data/.auth
