@@ -1,4 +1,4 @@
-import { expect, test } from '../../fixtures/fixtureBuilder';
+import { expect, test } from '../fixtures/fixtureBuilder';
 import { createBdd } from 'playwright-bdd';
 
 const { When, Then } = createBdd(test);
@@ -13,4 +13,10 @@ Then(/^I see the product (.*) is displayed within the search results$/, async ({
 
 When(/^I filter by the price range around (.*)$/, async ({ filterPanel }, price: string) => {
     await filterPanel.narrowPriceAround(Number(price));
+});
+
+Then(/^I see no filtering has occurred$/, async ({ searchResultsPage }) => {
+    //Given after filtering we will rarely have more than 1 page of items, using the existence of pagination
+    //to verify that results are currently showing the products unfiltered.
+    await expect(searchResultsPage.pagination).toBeVisible();
 });

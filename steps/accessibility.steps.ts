@@ -1,4 +1,4 @@
-import { expect, test } from '../../fixtures/fixtureBuilder';
+import { expect, test } from '../fixtures/fixtureBuilder';
 import {createBdd} from "playwright-bdd";
 import { AxeBuilder } from "@axe-core/playwright";
 
