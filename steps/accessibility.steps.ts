@@ -1,4 +1,4 @@
-import { expect, test } from '../../fixtures/fixtureBuilder';
+import { expect, test } from '../fixtures/fixtureBuilder';
 import {createBdd} from "playwright-bdd";
 import { AxeBuilder } from "@axe-core/playwright";
 
@@ -15,7 +15,7 @@ Then(/^the displayed content has no moderate or worse accessibility issues$/, as
         contentType: 'application/json',
     });
 
-    const issues = violations.filter(v => (v.impact === 'moderate' | v.impact === 'serious' | v.impact === 'critical'));
+    const issues = violations.filter(v => (v.impact === 'moderate' || v.impact === 'serious' || v.impact === 'critical'));
 
     //There's a known a11y issue. Setting to 1 to pass the test as we don't control the test site and can't fix the issue
     //Ideally this expects 0
