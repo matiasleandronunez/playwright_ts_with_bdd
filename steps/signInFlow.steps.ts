@@ -53,7 +53,7 @@ When('I sign in with a valid user', async ({ signInPage }) => {
 Then('I see the user dashboard displayed', async ({ accountHomePage }) => {
     await expect(accountHomePage.accountHeader).toHaveText('My account');
 
-    const authFile = path.join(__dirname, "../../test-data/.auth");
+    const authFile = path.join(__dirname, "../test-data/.auth");
     await accountHomePage.page.request.storageState({ path: authFile });
 });
 
